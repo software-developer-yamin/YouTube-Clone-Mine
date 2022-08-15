@@ -1,0 +1,15 @@
+import pino from "pino";
+
+const logger = pino({
+  transport: {
+    target: "pino-pretty",
+    options: {
+      colorize: true,
+      translateTime: true, // --translateTime
+      ignore: "pid,hostname", // --ignore
+    },
+  },
+  
+});
+
+export default logger;
