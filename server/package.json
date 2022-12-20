@@ -5,8 +5,10 @@
   "author": "Yamin",
   "license": "MIT",
   "scripts": {
-    "dev": "tsnd --exit-child --transpile-only src/app.ts",
-    "start": "node build/app.js"
+    "build": "tsc",
+    "dev": "ts-node ./src/app.ts",
+    "format": "prettier --write . --ignore-path .gitignore",
+    "start": "node ./dist/app.js"
   },
   "dependencies": {
     "@mantine/form": "^4.1.2",
@@ -25,6 +27,7 @@
     "mongoose-slug-generator": "^1.0.4",
     "nanoid": "^3.3.2",
     "pino": "^7.10.0",
+    "ts-node": "^10.9.1",
     "zod": "^3.14.4",
     "zod-express-middleware": "^1.4.0"
   },

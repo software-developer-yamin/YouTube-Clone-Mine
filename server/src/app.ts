@@ -16,8 +16,6 @@ const app = express();
 // Load environment variables from .env file
 dotenv.config();
 
-console.log(process.env.JWT_SECRET);
-
 app.use(
   cors({
     origin: process.env.CORS_ORIGIN,
